@@ -1,0 +1,100 @@
+hidden_dim: 128
+input_dim: 7
+norm_param:
+- log_transform: false
+  val: !!python/tuple
+  - !!python/object/apply:numpy._core.multiarray.scalar
+    - &id001 !!python/object/apply:numpy.dtype
+      args:
+      - f4
+      - false
+      - true
+      state: !!python/tuple
+      - 3
+      - <
+      - null
+      - null
+      - null
+      - -1
+      - -1
+      - 0
+    - !!binary |
+      BjhXPg==
+  - !!python/object/apply:numpy._core.multiarray.scalar
+    - *id001
+    - !!binary |
+      qNjDPg==
+- log_transform: false
+  val: !!python/tuple
+  - !!python/object/apply:numpy._core.multiarray.scalar
+    - *id001
+    - !!binary |
+      3ii0uQ==
+  - !!python/object/apply:numpy._core.multiarray.scalar
+    - *id001
+    - !!binary |
+      fBo1Pw==
+- log_transform: false
+  val: !!python/tuple
+  - !!python/object/apply:numpy._core.multiarray.scalar
+    - *id001
+    - !!binary |
+      AOD1uQ==
+  - !!python/object/apply:numpy._core.multiarray.scalar
+    - *id001
+    - !!binary |
+      Y8eSPw==
+- log_transform: true
+  val: !!python/tuple
+  - !!python/object/apply:numpy._core.multiarray.scalar
+    - *id001
+    - !!binary |
+      g6fmPA==
+  - !!python/object/apply:numpy._core.multiarray.scalar
+    - *id001
+    - !!binary |
+      cTMTQA==
+- log_transform: true
+  val: !!python/tuple
+  - !!python/object/apply:numpy._core.multiarray.scalar
+    - *id001
+    - !!binary |
+      3P6EQA==
+  - !!python/object/apply:numpy._core.multiarray.scalar
+    - *id001
+    - !!binary |
+      j0kMPw==
+- log_transform: false
+  val: !!python/tuple
+  - !!python/object/apply:numpy._core.multiarray.scalar
+    - *id001
+    - !!binary |
+      l70JuQ==
+  - !!python/object/apply:numpy._core.multiarray.scalar
+    - *id001
+    - !!binary |
+      Zu80Pw==
+- log_transform: false
+  val: !!python/tuple
+  - !!python/object/apply:numpy._core.multiarray.scalar
+    - &id002 !!python/object/apply:numpy.dtype
+      args:
+      - f8
+      - false
+      - true
+      state: !!python/tuple
+      - 3
+      - <
+      - null
+      - null
+      - null
+      - -1
+      - -1
+      - 0
+    - !!binary |
+      AAAAAAAA4D8=
+  - !!python/object/apply:numpy._core.multiarray.scalar
+    - *id002
+    - !!binary |
+      AAAAAAAA4D8=
+output_dim: 2
