@@ -1,0 +1,166 @@
+========== XGBoost AtoBB Training Record ==========
+Saved at              : 2026-08-12T21:48:29.387827
+Tag                   : MHc130_MA90_nbkg100000_boost500_none
+Model name            : xgboost_atobb_MHc130_MA90_ttlJ
+Tree name             : Training_Tree
+TARGET_MHc            : 130.0
+TARGET_MA             : 90.0
+
+========== Input Samples ==========
+Signal files:
+  /data9/Users/bhoh/SKNanoOutput/AtobbMLTree/2024/TTToHcToWAToBB-MHc130_MA90_SingleLepFilter.root
+    ROOT entries = 15765
+Background files:
+  /data9/Users/bhoh/SKNanoOutput/AtobbMLTree/2024/TTLJ_powheg.root
+    ROOT entries = 224928
+N_BKG requested       : 100000
+Signal after loading  : 15765
+Bkg after limit       : 100000
+Signal after cleaning : 15765
+Bkg after cleaning    : 100000
+
+========== Train / Validation ==========
+Random seed           : 42
+Train entries         : 92612
+Validation entries    : 23153
+Train signal          : 12612
+Train background      : 80000
+Validation signal     : 3153
+Validation background : 20000
+Training weight       : weight_train -> ml_weight
+Sum train weights     : 92754.25938
+Sum validation weights: 23010.74062
+
+========== Preprocessing ==========
+SCALER_TYPE           : None
+Number of features    : 37
+Feature order:
+  00: HT
+  01: ST
+  02: nJets
+  03: nBJets
+  04: bb_mass_01
+  05: bb_mass_02
+  06: bb_mass_12
+  07: bb_mass_03
+  08: bb_mass_13
+  09: bb_mass_23
+  10: bb_dr_01
+  11: bb_dr_02
+  12: bb_dr_12
+  13: bb_dr_03
+  14: bb_dr_13
+  15: bb_dr_23
+  16: bblnu_mass_01
+  17: bblnu_mass_02
+  18: bblnu_mass_12
+  19: bblnu_mass_03
+  20: bblnu_mass_13
+  21: bblnu_mass_23
+  22: bbjj_mass_01
+  23: bbjj_mass_02
+  24: bbjj_mass_12
+  25: bbjj_mass_03
+  26: bbjj_mass_13
+  27: bbjj_mass_23
+  28: bbbW_mass_012
+  29: bbbW_mass_013
+  30: bbbW_mass_023
+  31: bbbW_mass_123
+  32: bW_mass_013
+  33: bW_mass_023
+  34: bW_mass_123
+  35: lnu_mass
+  36: jj_mass
+
+========== XGBoost Configuration ==========
+NUM_BOOST_ROUND requested : 500
+Actual rounds run         : 500
+Early stopping rounds     : 50
+Best iteration            : 499
+Best score                : 0.5210204508783853
+Parameters:
+  max_depth: 4
+  eta: 0.05
+  objective: binary:logistic
+  eval_metric: logloss
+  subsample: 0.8
+  colsample_bytree: 0.8
+  random_state: 42
+  tree_method: hist
+
+========== Performance ==========
+Train AUC             : 0.8637497143
+Validation AUC        : 0.8151790966
+AUC gap               : 0.0485706177
+Final train logloss   : 0.4655836483
+Final val logloss     : 0.5210204509
+Train logloss @ best  : 0.4655836483
+Val logloss @ best    : 0.5210204509
+
+========== KS Overtraining Test ==========
+NOTE: scipy.stats.ks_2samp is an UNWEIGHTED KS test.
+Signal KS D           : 0.0608943863
+Signal KS p-value     : 1.427043672e-08
+Background KS D       : 0.0099250000
+Background KS p-value : 0.08494498691
+
+========== Feature Importance (gain) ==========
+01. 9                                   422.9402161
+02. 8                                   250.9082794
+03. 13                                  85.79199982
+04. 30                                  80.91132355
+05. 3                                   66.88369751
+06. 6                                   66.49767303
+07. 4                                   61.50050735
+08. 10                                  57.85397339
+09. 11                                  55.8975296
+10. 12                                  54.28456879
+11. 18                                  53.03890228
+12. 31                                  46.69655609
+13. 7                                   46.56386185
+14. 5                                   45.81870651
+15. 1                                   43.91709137
+16. 28                                  37.35811996
+17. 15                                  36.84303284
+18. 16                                  35.25440216
+19. 17                                  31.54580498
+20. 14                                  30.4652195
+21. 32                                  27.13146782
+22. 0                                   26.9602623
+23. 2                                   25.88626671
+24. 33                                  25.63947868
+25. 24                                  24.10279655
+26. 19                                  22.00037766
+27. 29                                  21.79552841
+28. 36                                  21.62314987
+29. 23                                  18.31185722
+30. 22                                  17.9367733
+31. 20                                  17.24024391
+32. 35                                  17.15399551
+33. 21                                  16.78005028
+34. 27                                  15.23199081
+35. 26                                  14.20965481
+36. 34                                  13.85498714
+37. 25                                  12.5215044
+
+========== Software ==========
+Python                : 3.11.15 | packaged by conda-forge | (main, Mar  5 2026, 16:45:40) [GCC 14.3.0]
+Platform              : Linux-4.18.0-553.87.1.el8_10.x86_64-x86_64-with-glibc2.28
+NumPy                 : 1.26.4
+Pandas                : 3.0.2
+XGBoost               : 3.2.0
+scikit-learn          : 1.8.0
+SciPy                 : 1.17.1
+ROOT                   : 6.38.04
+
+========== Saved Files ==========
+  roc_validation_MHc130_MA90_nbkg100000_boost500_none.png
+  roc_train_vs_val_MHc130_MA90_nbkg100000_boost500_none.png
+  score_validation_weighted_MHc130_MA90_nbkg100000_boost500_none.png
+  score_validation_shape_MHc130_MA90_nbkg100000_boost500_none.png
+  overtraining_MHc130_MA90_nbkg100000_boost500_none.png
+  learning_curve_MHc130_MA90_nbkg100000_boost500_none.png
+  ks_cdf_MHc130_MA90_nbkg100000_boost500_none.png
+  importance_MHc130_MA90_nbkg100000_boost500_none.png
+  feature_importance_MHc130_MA90_nbkg100000_boost500_none.csv

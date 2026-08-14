@@ -1,0 +1,128 @@
+========== XGBoost AtoBB Training Record ==========
+Saved at              : 2026-08-11T16:47:13.257289
+Tag                   : MHc130_MA90_nbkg100000_boost100_none
+Model name            : xgboost_atobb_MHc130_MA90_ttlJ
+Tree name             : Training_Tree
+TARGET_MHc            : 130.0
+TARGET_MA             : 90.0
+
+========== Input Samples ==========
+Signal files:
+  /data9/Users/eunsu/SKNanoOutput/AtobbMLTree/2024/0811_before_fix_dr_max_error/TTToHcToWAToBB-MHc130_MA90_SingleLepFilter.root
+    ROOT entries = 15772
+Background files:
+  /data9/Users/eunsu/SKNanoOutput/AtobbMLTree/2024/0811_before_fix_dr_max_error/TTLJ_powheg.root
+    ROOT entries = 2245142
+N_BKG requested       : 100000
+Signal after loading  : 15772
+Bkg after limit       : 100000
+Signal after cleaning : 15772
+Bkg after cleaning    : 100000
+
+========== Train / Validation ==========
+Random seed           : 42
+Train entries         : 92617
+Validation entries    : 23155
+Train signal          : 12618
+Train background      : 79999
+Validation signal     : 3154
+Validation background : 20001
+Training weight       : weight_train -> ml_weight
+Sum train weights     : 92667.88293
+Sum validation weights: 23104.11707
+
+========== Preprocessing ==========
+SCALER_TYPE           : None
+Number of features    : 21
+Feature order:
+  00: HT
+  01: ST
+  02: MET_Pt
+  03: nJets
+  04: nBJets
+  05: Lepton0_Pt
+  06: Lepton0_Eta
+  07: bb_mass_min_all
+  08: bb_mass_max_all
+  09: bb_mass_at_min_dr
+  10: bb_dr_min_all
+  11: best_chi2
+  12: had_W_mass
+  13: had_top_mass
+  14: lep_W_mass
+  15: lep_top_mass
+  16: A_mass_best
+  17: A_dr_best
+  18: A_pt_best
+  19: A_eta_abs
+  20: A_pt_balance_best
+
+========== XGBoost Configuration ==========
+NUM_BOOST_ROUND requested : 100
+Actual rounds run         : 100
+Early stopping rounds     : 50
+Best iteration            : None
+Best score                : None
+Parameters:
+  max_depth: 2
+  eta: 0.05
+  objective: binary:logistic
+  eval_metric: logloss
+  subsample: 0.8
+  colsample_bytree: 0.8
+  min_child_weight: 20
+  random_state: 42
+  tree_method: hist
+
+========== Performance ==========
+Train AUC             : 0.7844340822
+Validation AUC        : 0.7779056300
+AUC gap               : 0.0065284521
+Final train logloss   : 0.5614786909
+Final val logloss     : 0.5678200994
+
+========== KS Overtraining Test ==========
+NOTE: scipy.stats.ks_2samp is an UNWEIGHTED KS test.
+Signal KS D           : 0.0129264964
+Signal KS p-value     : 0.7880183342
+Background KS D       : 0.0048535736
+Background KS p-value : 0.8434489304
+
+========== Feature Importance (gain) ==========
+01. 4                                   1626.011475
+02. 9                                   1162.753052
+03. 10                                  997.6967163
+04. 7                                   708.7348633
+05. 16                                  498.1275635
+06. 8                                   450.1062012
+07. 1                                   398.3213501
+08. 5                                   371.4934998
+09. 17                                  276.4797668
+10. 3                                   255.65802
+11. 20                                  224.891037
+12. 15                                  224.0379944
+13. 12                                  207.9151306
+14. 13                                  167.8173676
+15. 2                                   164.835434
+16. 18                                  29.3795929
+
+========== Software ==========
+Python                : 3.11.15 | packaged by conda-forge | (main, Mar  5 2026, 16:45:40) [GCC 14.3.0]
+Platform              : Linux-4.18.0-553.87.1.el8_10.x86_64-x86_64-with-glibc2.28
+NumPy                 : 1.26.4
+Pandas                : 3.0.2
+XGBoost               : 3.2.0
+scikit-learn          : 1.8.0
+SciPy                 : 1.17.1
+ROOT                   : 6.38.04
+
+========== Saved Files ==========
+  roc_validation_MHc130_MA90_nbkg100000_boost100_none.png
+  roc_train_vs_val_MHc130_MA90_nbkg100000_boost100_none.png
+  score_validation_weighted_MHc130_MA90_nbkg100000_boost100_none.png
+  score_validation_shape_MHc130_MA90_nbkg100000_boost100_none.png
+  overtraining_MHc130_MA90_nbkg100000_boost100_none.png
+  learning_curve_MHc130_MA90_nbkg100000_boost100_none.png
+  ks_cdf_MHc130_MA90_nbkg100000_boost100_none.png
+  importance_MHc130_MA90_nbkg100000_boost100_none.png
+  feature_importance_MHc130_MA90_nbkg100000_boost100_none.csv
